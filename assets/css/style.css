@@ -6,15 +6,15 @@
 
 /* ---------- 1. 變數 ---------- */
 :root {
-  --paper: #f6f2ea;
-  --paper-2: #fffdf8;
-  --ink: #1f1d1a;
-  --ink-2: #6b655c;
-  --line: #e2dbcd;
-  --accent: #3b4cca;
-  --accent-soft: #e4e7fb;
+  --paper: #fdfcf9;
+  --paper-2: #ffffff;
+  --ink: #23211e;
+  --ink-2: #6e6a63;
+  --line: #ebe6dc;
+  --accent: #3355e0;
+  --accent-soft: #eaefff;
   --warn: #9a5b00;
-  --warn-soft: #fbefd9;
+  --warn-soft: #fdf3e1;
 
   --font-serif: "Noto Serif TC", "Songti TC", serif;
   --font-sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
@@ -23,22 +23,9 @@
   --max: 1080px;
   --measure: 68ch;
   --radius: 14px;
-  --shadow: 0 1px 2px rgb(31 29 26 / 0.04), 0 8px 24px rgb(31 29 26 / 0.06);
-}
+  --shadow: 0 1px 2px rgb(35 33 30 / 0.04), 0 8px 24px rgb(35 33 30 / 0.06);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: #17161a;
-    --paper-2: #201f24;
-    --ink: #ece8e1;
-    --ink-2: #a39d93;
-    --line: #34323a;
-    --accent: #8f9bff;
-    --accent-soft: #2a2d4a;
-    --warn: #f0b75e;
-    --warn-soft: #3a2f1c;
-    --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 8px 24px rgb(0 0 0 / 0.25);
-  }
+  color-scheme: light;
 }
 
 /* ---------- 2. 基礎 ---------- */
@@ -410,7 +397,8 @@ h1, h2, h3 {
 }
 
 .wiki-body h2 { font-size: 1.3rem; margin: 40px 0 12px; }
-.wiki-body h3, .wiki-body h4 { font-size: 1.05rem; margin: 28px 0 8px; }
+.wiki-body h3 { font-size: 1.2rem; margin: 40px 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+.wiki-body h4 { font-size: 1rem; margin: 22px 0 8px; font-family: var(--font-sans); font-weight: 500; color: var(--accent); }
 .wiki-body p { margin: 0 0 1em; }
 .wiki-body ul, .wiki-body ol { padding-left: 1.3em; margin: 0 0 1em; }
 .wiki-body li { margin-bottom: 0.4em; }
@@ -435,12 +423,12 @@ h1, h2, h3 {
 .wiki-body pre code { background: none; padding: 0; }
 
 .wiki-body blockquote {
-  margin: 0 0 1.4em;
+  margin: 0 0 1em;
   padding: 10px 16px;
   border-left: 3px solid var(--accent);
-  background: var(--paper-2);
+  background: var(--accent-soft);
   border-radius: 0 8px 8px 0;
-  color: var(--ink-2);
+  color: var(--ink);
 }
 
 .wiki-body blockquote p { margin: 0; }

@@ -5,7 +5,7 @@ summary: n. 監控、監視
 pos: n.
 zh: 監控、監視
 topic: technology
-sources: raw/vocab/2026-11-16-technology.md
+sources: raw/vocab/2026-11-16-technology.md, raw/vocab/2026-11-16-usage.md
 updated: 2026-11-16
 ---
 
@@ -16,6 +16,26 @@ updated: 2026-11-16
 ## 例句
 
 > The spread of surveillance cameras raises concerns about privacy.
+
+## 不同用法
+
+### 1. 不可數名詞
+
+> The city has increased surveillance in public spaces.
+
+不加 a、不用複數。
+
+### 2. under surveillance
+
+> The suspect was kept under surveillance for weeks.
+
+「被監視中」的固定片語。
+
+### 3. 放在名詞前當修飾語
+
+> Surveillance technology is developing rapidly.
+
+surveillance camera／system／technology。
 
 ## 常見搭配
 

@@ -5,7 +5,7 @@ summary: adj. 職業的、技職的
 pos: adj.
 zh: 職業的、技職的
 topic: education
-sources: raw/vocab/2026-11-16-education.md
+sources: raw/vocab/2026-11-16-education.md, raw/vocab/2026-11-16-usage.md
 updated: 2026-11-16
 ---
 
@@ -16,6 +16,26 @@ updated: 2026-11-16
 ## 例句
 
 > Vocational training gives young people practical skills for the job market.
+
+## 不同用法
+
+### 1. 放在名詞前
+
+> She enrolled in a vocational course in nursing.
+
+修飾課程、學校、技能。
+
+### 2. 與學術教育對比
+
+> Vocational education is as valuable as academic study.
+
+議論文常與 academic 對照。
+
+### 3. 名詞 vocation
+
+> He found his true vocation in teaching.
+
+vocation 有「天職、使命感」的意思。
 
 ## 常見搭配
 

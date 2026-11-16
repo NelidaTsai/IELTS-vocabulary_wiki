@@ -19,7 +19,7 @@ CSS_FILE = ROOT / "assets/css/style.css"
 # 每種頁面：放哪個資料夾、frontmatter 必填欄位、正文必備的 ## 區塊（依序）
 TYPES = {
     "word": ("words", ["title", "summary", "pos", "zh", "topic", "sources", "updated"],
-             ["意思", "例句", "常見搭配", "同義替換", "字族", "相關單字", "主題"]),
+             ["意思", "例句", "不同用法", "常見搭配", "同義替換", "字族", "相關單字", "主題"]),
     "topic": ("topics", ["title", "summary", "sources", "updated"], ["單字一覽", "依用途分組", "例句精選", "相關"]),
     "concept": ("concepts", ["title", "summary", "sources", "updated"], ["定義", "知識庫中的例子"]),
     "query": ("queries", ["title", "summary", "asked", "updated"], ["問題", "回答", "引用"]),
@@ -46,6 +46,17 @@ def raw_words():
             cells = [c.strip() for c in line.strip().strip("|").split("|")]
             if line.startswith("|") and len(cells) >= 8 and cells[0] != "word" and not set(cells[0]) <= set("-: "):
                 found[cells[0]] = (topic, f.relative_to(ROOT).as_posix())
+    return found
+
+
+def raw_usages():
+    """從 raw/vocab/*-usage.md 的 4 欄表格讀出用法：{word: [(用法, 檔案), ...]}"""
+    found = {}
+    for f in sorted(RAW_VOCAB.glob("*-usage*.md")):
+        for line in f.read_text(encoding="utf-8").splitlines():
+            cells = [c.strip() for c in line.strip().strip("|").split("|")]
+            if line.startswith("|") and len(cells) == 4 and cells[0] != "word" and not set(cells[0]) <= set("-: "):
+                found.setdefault(cells[0], []).append((cells[1], f.relative_to(ROOT).as_posix()))
     return found
 
 
@@ -97,6 +108,14 @@ def check_wiki():
             elif f"../topics/{meta.get('topic')}.md" not in body:
                 err(f"{rel}：「主題」區塊要連到 ../topics/{meta.get('topic')}.md")
 
+        if ptype == "word":
+            usage = body.split("## 不同用法", 1)[-1].split("\n## ", 1)[0]
+            n_usage = len(re.findall(r"^### \d+\. ", usage, re.M))
+            if n_usage < 2 and "待補" not in usage:
+                err(f"{rel}：「不同用法」至少要有 2 種（### 1. …），或標示待補")
+            if n_usage and usage.count("\n> ") < n_usage:
+                err(f"{rel}：「不同用法」每種用法都要有一句 > 例句")
+
         if ptype == "query":
             cite = body.split("## 引用", 1)[-1]
             if not LINK_RE.search(cite):
@@ -136,6 +155,19 @@ def check_wiki():
     for pid, (meta, _, rel) in pages.items():
         if meta.get("type") == "word" and meta.get("title") not in rw:
             err(f"{rel}：raw/vocab/ 的筆記裡找不到這個字（wiki 內容必須來自 raw）")
+
+    # 用法補充筆記：表中的字要有單字頁，且單字頁要引用該筆記、收錄每一種用法
+    for word, items in raw_usages().items():
+        page = pages.get(f"words/{word}")
+        if not page:
+            err(f"{items[0][1]} 裡的「{word}」沒有單字頁（請先寫進主題筆記並 ingest）")
+            continue
+        meta, body, rel = page
+        for usage, src in items:
+            if src not in meta["sources"]:
+                err(f"{rel}：sources 應包含 {src}")
+            if usage not in body:
+                err(f"{rel}：「不同用法」缺少 {src} 裡的用法「{usage}」")
 
     # log 格式
     if (WIKI / "log.md").exists():

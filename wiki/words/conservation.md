@@ -5,7 +5,7 @@ summary: n. 保育、保護
 pos: n.
 zh: 保育、保護
 topic: environment
-sources: raw/vocab/2026-11-16-environment.md
+sources: raw/vocab/2026-11-16-environment.md, raw/vocab/2026-11-16-usage.md
 updated: 2026-11-16
 ---
 
@@ -16,6 +16,26 @@ updated: 2026-11-16
 ## 例句
 
 > Wildlife conservation projects rely heavily on public funding.
+
+## 不同用法
+
+### 1. 不可數名詞
+
+> Conservation of natural habitats should be a priority.
+
+指保護自然、野生動物。
+
+### 2. 指「節約」資源
+
+> Water conservation is essential during dry seasons.
+
+energy／water conservation 是節約。
+
+### 3. 動詞 conserve
+
+> We can conserve energy by switching off unused lights.
+
+動詞常表示節省、保存。
 
 ## 常見搭配
 

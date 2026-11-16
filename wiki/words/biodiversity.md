@@ -5,7 +5,7 @@ summary: n. 生物多樣性
 pos: n.
 zh: 生物多樣性
 topic: environment
-sources: raw/vocab/2026-11-16-environment.md
+sources: raw/vocab/2026-11-16-environment.md, raw/vocab/2026-11-16-usage.md
 updated: 2026-11-16
 ---
 
@@ -16,6 +16,26 @@ updated: 2026-11-16
 ## 例句
 
 > Deforestation is a major threat to biodiversity.
+
+## 不同用法
+
+### 1. 不可數名詞
+
+> The rainforest is home to remarkable biodiversity.
+
+不加 a、不用複數。
+
+### 2. 當主詞描述變化
+
+> Biodiversity is declining at an alarming rate.
+
+常搭配 decline、loss。
+
+### 3. 形容詞 biodiverse
+
+> Coral reefs are among the most biodiverse ecosystems.
+
+描述某地區物種豐富。
 
 ## 常見搭配
 

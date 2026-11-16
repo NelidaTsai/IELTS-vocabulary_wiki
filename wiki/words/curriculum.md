@@ -5,7 +5,7 @@ summary: n. 課程（整體規劃）
 pos: n.
 zh: 課程（整體規劃）
 topic: education
-sources: raw/vocab/2026-11-16-education.md
+sources: raw/vocab/2026-11-16-education.md, raw/vocab/2026-11-16-usage.md
 updated: 2026-11-16
 ---
 
@@ -16,6 +16,26 @@ updated: 2026-11-16
 ## 例句
 
 > Many people believe financial skills should be part of the school curriculum.
+
+## 不同用法
+
+### 1. 可數，複數 curricula 或 curriculums
+
+> Schools in different countries follow very different curricula.
+
+正式寫作常用 curricula。
+
+### 2. on the curriculum
+
+> Coding is now on the curriculum in many primary schools.
+
+「被列入課程」的固定說法。
+
+### 3. 形容詞 curricular / extracurricular
+
+> Students are encouraged to join extracurricular activities.
+
+extracurricular 是「課外的」。
 
 ## 常見搭配
 

@@ -5,7 +5,7 @@ summary: adj. 過時的、淘汰的
 pos: adj.
 zh: 過時的、淘汰的
 topic: technology
-sources: raw/vocab/2026-11-16-technology.md
+sources: raw/vocab/2026-11-16-technology.md, raw/vocab/2026-11-16-usage.md
 updated: 2026-11-16
 ---
 
@@ -16,6 +16,26 @@ updated: 2026-11-16
 ## 例句
 
 > Many traditional jobs may become obsolete because of automation.
+
+## 不同用法
+
+### 1. become / render something obsolete
+
+> Digital cameras rendered film cameras almost obsolete.
+
+render ... obsolete 是正式寫法。
+
+### 2. 放在名詞前
+
+> Many offices still rely on obsolete software.
+
+修飾設備、技術、技能。
+
+### 3. 名詞 obsolescence
+
+> Planned obsolescence encourages people to buy new products.
+
+planned obsolescence 是「計畫性淘汰」。
 
 ## 常見搭配
 

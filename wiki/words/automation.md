@@ -5,7 +5,7 @@ summary: n. 自動化
 pos: n.
 zh: 自動化
 topic: technology
-sources: raw/vocab/2026-11-16-technology.md
+sources: raw/vocab/2026-11-16-technology.md, raw/vocab/2026-11-16-usage.md
 updated: 2026-11-16
 ---
 
@@ -16,6 +16,26 @@ updated: 2026-11-16
 ## 例句
 
 > Automation has increased productivity in the manufacturing sector.
+
+## 不同用法
+
+### 1. 不可數名詞
+
+> Automation could replace millions of repetitive jobs.
+
+指自動化這個趨勢。
+
+### 2. 動詞 automate
+
+> Many banks have automated their customer service.
+
+及物動詞，受詞是流程或工作。
+
+### 3. 形容詞 automated
+
+> Automated checkouts are becoming common in supermarkets.
+
+描述自動運作的設備。
 
 ## 常見搭配
 

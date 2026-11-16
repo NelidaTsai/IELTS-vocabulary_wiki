@@ -45,7 +45,7 @@ window.WIKI = {
   "updated": "2026-11-16"
  },
  "log": {
-  "body": "每筆紀錄的標題格式固定為 `## [YYYY-MM-DD] 操作 | 對象`，可以用 `grep \"^## \\[\" wiki/log.md` 快速列出。新紀錄加在最下面。\n\n## [2026-11-16] ingest | Environment 環境\n\n- 來源：`raw/vocab/2026-11-16-environment.md`\n- 新增：topics/environment、words/deteriorate、sustainable、emission、mitigate、biodiversity、conservation\n- 新增學習方法頁：concepts/collocation、paraphrasing、word-family\n\n## [2026-11-16] ingest | Education 教育\n\n- 來源：`raw/vocab/2026-11-16-education.md`\n- 新增：topics/education、words/curriculum、compulsory、literacy、vocational、tuition、cognitive\n- 更新：concepts/collocation、paraphrasing、word-family（加入例子）\n- 備註：tuition 的字族在筆記中為「—」，單字頁標示「筆記中未列出」。\n\n## [2026-11-16] ingest | Technology 科技\n\n- 來源：`raw/vocab/2026-11-16-technology.md`\n- 新增：topics/technology、words/innovation、obsolete、automation、surveillance、ubiquitous、privacy\n- 跨主題連結：vocational ↔ automation（技職訓練與自動化對工作的影響）\n\n## [2026-11-16] query | 環境類 Task 2 可以用哪些字？\n\n- 依 topics/environment 與 6 個單字頁回答，存成 queries/environment-task2-words。\n\n## [2026-11-16] query | 想替換 reduce，可以用哪些字？\n\n- 依 words/mitigate、words/emission 回答；decrease、diminish 不在知識庫，未回答。存成 queries/paraphrase-reduce。\n\n## [2026-11-16] query | procrastinate 是什麼意思？\n\n- 知識庫沒有此字，依規則不回答，建議 ingest。存成 queries/not-in-wiki-procrastinate 作為示範。\n\n## [2026-11-16] lint | 全站\n\n- `python3 scripts/check.py`：全部通過。18 個單字都有頁面，raw 筆記中的每個字都已 ingest。\n",
+  "body": "每筆紀錄的標題格式固定為 `## [YYYY-MM-DD] 操作 | 對象`，可以用 `grep \"^## \\[\" wiki/log.md` 快速列出。新紀錄加在最下面。\n\n## [2026-11-16] ingest | Environment 環境\n\n- 來源：`raw/vocab/2026-11-16-environment.md`\n- 新增：topics/environment、words/deteriorate、sustainable、emission、mitigate、biodiversity、conservation\n- 新增學習方法頁：concepts/collocation、paraphrasing、word-family\n\n## [2026-11-16] ingest | Education 教育\n\n- 來源：`raw/vocab/2026-11-16-education.md`\n- 新增：topics/education、words/curriculum、compulsory、literacy、vocational、tuition、cognitive\n- 更新：concepts/collocation、paraphrasing、word-family（加入例子）\n- 備註：tuition 的字族在筆記中為「—」，單字頁標示「筆記中未列出」。\n\n## [2026-11-16] ingest | Technology 科技\n\n- 來源：`raw/vocab/2026-11-16-technology.md`\n- 新增：topics/technology、words/innovation、obsolete、automation、surveillance、ubiquitous、privacy\n- 跨主題連結：vocational ↔ automation（技職訓練與自動化對工作的影響）\n\n## [2026-11-16] query | 環境類 Task 2 可以用哪些字？\n\n- 依 topics/environment 與 6 個單字頁回答，存成 queries/environment-task2-words。\n\n## [2026-11-16] query | 想替換 reduce，可以用哪些字？\n\n- 依 words/mitigate、words/emission 回答；decrease、diminish 不在知識庫，未回答。存成 queries/paraphrase-reduce。\n\n## [2026-11-16] query | procrastinate 是什麼意思？\n\n- 知識庫沒有此字，依規則不回答，建議 ingest。存成 queries/not-in-wiki-procrastinate 作為示範。\n\n## [2026-11-16] lint | 全站\n\n- `python3 scripts/check.py`：全部通過。18 個單字都有頁面，raw 筆記中的每個字都已 ingest。\n\n## [2026-11-16] ingest | 用法補充筆記\n\n- 來源：`raw/vocab/2026-11-16-usage.md`（每個字 3 種用法，共 54 句例句）\n- 更新：18 個單字頁新增「不同用法」區塊（詞性變化、固定句型、不同語意），sources 加上用法補充筆記\n- 規則更新：CLAUDE.md 第 5、6.1 節加入「用法補充筆記」格式與「不同用法」必備區塊；check.py 同步檢查\n- 值得注意的用法：sustainable 也可指「能長期維持的」（非環境）；conservation 也可指「節約」資源；tuition 也可指「教學、家教」\n",
   "sources": [],
   "summary": "依時間排列、只往後加的 wiki 操作紀錄（ingest / query / lint）。",
   "title": "操作紀錄",
@@ -110,10 +110,11 @@ window.WIKI = {
   "updated": "2026-11-16"
  },
  "words/automation": {
-  "body": "## 意思\n\n**n.** 自動化：the use of machines to do work previously done by people\n\n## 例句\n\n> Automation has increased productivity in the manufacturing sector.\n\n## 常見搭配\n\n- factory automation\n- job losses due to automation\n\n見 [搭配詞](../concepts/collocation.md)。\n\n## 同義替換\n\n- mechanisation\n\n見 [同義替換](../concepts/paraphrasing.md)。\n\n## 字族\n\n- automate (v.)\n- automated (adj.)\n\n見 [字族](../concepts/word-family.md)。\n\n## 相關單字\n\n- [obsolete](obsolete.md)（adj. 過時的、淘汰的）\n- [vocational](vocational.md)（adj. 職業的、技職的）\n\n## 主題\n\n[Technology 科技](../topics/technology.md)\n",
+  "body": "## 意思\n\n**n.** 自動化：the use of machines to do work previously done by people\n\n## 例句\n\n> Automation has increased productivity in the manufacturing sector.\n\n## 不同用法\n\n### 1. 不可數名詞\n\n> Automation could replace millions of repetitive jobs.\n\n指自動化這個趨勢。\n\n### 2. 動詞 automate\n\n> Many banks have automated their customer service.\n\n及物動詞，受詞是流程或工作。\n\n### 3. 形容詞 automated\n\n> Automated checkouts are becoming common in supermarkets.\n\n描述自動運作的設備。\n\n## 常見搭配\n\n- factory automation\n- job losses due to automation\n\n見 [搭配詞](../concepts/collocation.md)。\n\n## 同義替換\n\n- mechanisation\n\n見 [同義替換](../concepts/paraphrasing.md)。\n\n## 字族\n\n- automate (v.)\n- automated (adj.)\n\n見 [字族](../concepts/word-family.md)。\n\n## 相關單字\n\n- [obsolete](obsolete.md)（adj. 過時的、淘汰的）\n- [vocational](vocational.md)（adj. 職業的、技職的）\n\n## 主題\n\n[Technology 科技](../topics/technology.md)\n",
   "pos": "n.",
   "sources": [
-   "raw/vocab/2026-11-16-technology.md"
+   "raw/vocab/2026-11-16-technology.md",
+   "raw/vocab/2026-11-16-usage.md"
   ],
   "summary": "n. 自動化",
   "title": "automation",
@@ -123,10 +124,11 @@ window.WIKI = {
   "zh": "自動化"
  },
  "words/biodiversity": {
-  "body": "## 意思\n\n**n.** 生物多樣性：the variety of plant and animal life in an area\n\n## 例句\n\n> Deforestation is a major threat to biodiversity.\n\n## 常見搭配\n\n- loss of biodiversity\n- protect biodiversity\n\n見 [搭配詞](../concepts/collocation.md)。\n\n## 同義替換\n\n- variety of species\n\n見 [同義替換](../concepts/paraphrasing.md)。\n\n## 字族\n\n- biodiverse (adj.)\n\n見 [字族](../concepts/word-family.md)。\n\n## 相關單字\n\n- [conservation](conservation.md)（n. 保育、保護）\n\n## 主題\n\n[Environment 環境](../topics/environment.md)\n",
+  "body": "## 意思\n\n**n.** 生物多樣性：the variety of plant and animal life in an area\n\n## 例句\n\n> Deforestation is a major threat to biodiversity.\n\n## 不同用法\n\n### 1. 不可數名詞\n\n> The rainforest is home to remarkable biodiversity.\n\n不加 a、不用複數。\n\n### 2. 當主詞描述變化\n\n> Biodiversity is declining at an alarming rate.\n\n常搭配 decline、loss。\n\n### 3. 形容詞 biodiverse\n\n> Coral reefs are among the most biodiverse ecosystems.\n\n描述某地區物種豐富。\n\n## 常見搭配\n\n- loss of biodiversity\n- protect biodiversity\n\n見 [搭配詞](../concepts/collocation.md)。\n\n## 同義替換\n\n- variety of species\n\n見 [同義替換](../concepts/paraphrasing.md)。\n\n## 字族\n\n- biodiverse (adj.)\n\n見 [字族](../concepts/word-family.md)。\n\n## 相關單字\n\n- [conservation](conservation.md)（n. 保育、保護）\n\n## 主題\n\n[Environment 環境](../topics/environment.md)\n",
   "pos": "n.",
   "sources": [
-   "raw/vocab/2026-11-16-environment.md"
+   "raw/vocab/2026-11-16-environment.md",
+   "raw/vocab/2026-11-16-usage.md"
   ],
   "summary": "n. 生物多樣性",
   "title": "biodiversity",
@@ -136,10 +138,11 @@ window.WIKI = {
   "zh": "生物多樣性"
  },
  "words/cognitive": {
-  "body": "## 意思\n\n**adj.** 認知的：relating to thinking, learning and understanding\n\n## 例句\n\n> Learning a second language may improve children's cognitive development.\n\n## 常見搭配\n\n- cognitive development\n- cognitive skills\n\n見 [搭配詞](../concepts/collocation.md)。\n\n## 同義替換\n\n- mental\n- intellectual\n\n見 [同義替換](../concepts/paraphrasing.md)。\n\n## 字族\n\n- cognition (n.)\n\n見 [字族](../concepts/word-family.md)。\n\n## 相關單字\n\n- [literacy](literacy.md)（n. 讀寫能力）\n\n## 主題\n\n[Education 教育](../topics/education.md)\n",
+  "body": "## 意思\n\n**adj.** 認知的：relating to thinking, learning and understanding\n\n## 例句\n\n> Learning a second language may improve children's cognitive development.\n\n## 不同用法\n\n### 1. 修飾能力或發展\n\n> Regular exercise may improve cognitive function in older adults.\n\ncognitive function／ability。\n\n### 2. cognitive load\n\n> Long instructions increase the cognitive load on learners.\n\n指大腦處理資訊的負擔。\n\n### 3. 名詞 cognition\n\n> Sleep plays an important role in human cognition.\n\n學術文章常用。\n\n## 常見搭配\n\n- cognitive development\n- cognitive skills\n\n見 [搭配詞](../concepts/collocation.md)。\n\n## 同義替換\n\n- mental\n- intellectual\n\n見 [同義替換](../concepts/paraphrasing.md)。\n\n## 字族\n\n- cognition (n.)\n\n見 [字族](../concepts/word-family.md)。\n\n## 相關單字\n\n- [literacy](literacy.md)（n. 讀寫能力）\n\n## 主題\n\n[Education 教育](../topics/education.md)\n",
   "pos": "adj.",
   "sources": [
-   "raw/vocab/2026-11-16-education.md"
+   "raw/vocab/2026-11-16-education.md",
+   "raw/vocab/2026-11-16-usage.md"
   ],
   "summary": "adj. 認知的",
   "title": "cognitive",
@@ -149,10 +152,11 @@ window.WIKI = {
   "zh": "認知的"
  },
  "words/compulsory": {
-  "body": "## 意思\n\n**adj.** 義務的、強制的：required by law or a rule\n\n## 例句\n\n> Physical education is compulsory in most secondary schools.\n\n## 常見搭配\n\n- compulsory education\n- compulsory subject\n\n見 [搭配詞](../concepts/collocation.md)。\n\n## 同義替換\n\n- mandatory\n- obligatory\n\n見 [同義替換](../concepts/paraphrasing.md)。\n\n## 字族\n\n- compulsorily (adv.)\n\n見 [字族](../concepts/word-family.md)。\n\n## 相關單字\n\n- [curriculum](curriculum.md)（n. 課程（整體規劃））\n\n## 主題\n\n[Education 教育](../topics/education.md)\n",
+  "body": "## 意思\n\n**adj.** 義務的、強制的：required by law or a rule\n\n## 例句\n\n> Physical education is compulsory in most secondary schools.\n\n## 不同用法\n\n### 1. 放在名詞前\n\n> Compulsory military service exists in several countries.\n\n修飾某項必須做的事。\n\n### 2. be compulsory for + 人\n\n> Wearing a helmet is compulsory for all cyclists.\n\n說明對誰強制。\n\n### 3. make something compulsory\n\n> Some argue that voting should be made compulsory.\n\n議論文常見句型。\n\n## 常見搭配\n\n- compulsory education\n- compulsory subject\n\n見 [搭配詞](../concepts/collocation.md)。\n\n## 同義替換\n\n- mandatory\n- obligatory\n\n見 [同義替換](../concepts/paraphrasing.md)。\n\n## 字族\n\n- compulsorily (adv.)\n\n見 [字族](../concepts/word-family.md)。\n\n## 相關單字\n\n- [curriculum](curriculum.md)（n. 課程（整體規劃））\n\n## 主題\n\n[Education 教育](../topics/education.md)\n",
   "pos": "adj.",
   "sources": [
-   "raw/vocab/2026-11-16-education.md"
+   "raw/vocab/2026-11-16-education.md",
+   "raw/vocab/2026-11-16-usage.md"
   ],
   "summary": "adj. 義務的、強制的",
   "title": "compulsory",
@@ -162,10 +166,11 @@ window.WIKI = {
   "zh": "義務的、強制的"
  },
  "words/conservation": {
-  "body": "## 意思\n\n**n.** 保育、保護：the protection of nature, wildlife and resources\n\n## 例句\n\n> Wildlife conservation projects rely heavily on public funding.\n\n## 常見搭配\n\n- wildlife conservation\n- energy conservation\n\n見 [搭配詞](../concepts/collocation.md)。\n\n## 同義替換\n\n- protection\n- preservation\n\n見 [同義替換](../concepts/paraphrasing.md)。\n\n## 字族\n\n- conserve (v.)\n- conservationist (n.)\n\n見 [字族](../concepts/word-family.md)。\n\n## 相關單字\n\n- [biodiversity](biodiversity.md)（n. 生物多樣性）\n- [sustainable](sustainable.md)（adj. 可持續的、能永續的）\n\n## 主題\n\n[Environment 環境](../topics/environment.md)\n",
+  "body": "## 意思\n\n**n.** 保育、保護：the protection of nature, wildlife and resources\n\n## 例句\n\n> Wildlife conservation projects rely heavily on public funding.\n\n## 不同用法\n\n### 1. 不可數名詞\n\n> Conservation of natural habitats should be a priority.\n\n指保護自然、野生動物。\n\n### 2. 指「節約」資源\n\n> Water conservation is essential during dry seasons.\n\nenergy／water conservation 是節約。\n\n### 3. 動詞 conserve\n\n> We can conserve energy by switching off unused lights.\n\n動詞常表示節省、保存。\n\n## 常見搭配\n\n- wildlife conservation\n- energy conservation\n\n見 [搭配詞](../concepts/collocation.md)。\n\n## 同義替換\n\n- protection\n- preservation\n\n見 [同義替換](../concepts/paraphrasing.md)。\n\n## 字族\n\n- conserve (v.)\n- conservationist (n.)\n\n見 [字族](../concepts/word-family.md)。\n\n## 相關單字\n\n- [biodiversity](biodiversity.md)（n. 生物多樣性）\n- [sustainable](sustainable.md)（adj. 可持續的、能永續的）\n\n## 主題\n\n[Environment 環境](../topics/environment.md)\n",
   "pos": "n.",
   "sources": [
-   "raw/vocab/2026-11-16-environment.md"
+   "raw/vocab/2026-11-16-environment.md",
+   "raw/vocab/2026-11-16-usage.md"
   ],
   "summary": "n. 保育、保護",
   "title": "conservation",
@@ -175,10 +180,11 @@ window.WIKI = {
   "zh": "保育、保護"
  },
  "words/curriculum": {
-  "body": "## 意思\n\n**n.** 課程（整體規劃）：the subjects included in a course of study\n\n## 例句\n\n> Many people believe financial skills should be part of the school curriculum.\n\n## 常見搭配\n\n- school curriculum\n- national curriculum\n\n見 [搭配詞](../concepts/collocation.md)。\n\n## 同義替換\n\n- syllabus\n- course of study\n\n見 [同義替換](../concepts/paraphrasing.md)。\n\n## 字族\n\n- curricular (adj.)\n\n見 [字族](../concepts/word-family.md)。\n\n## 相關單字\n\n- [compulsory](compulsory.md)（adj. 義務的、強制的）\n- [vocational](vocational.md)（adj. 職業的、技職的）\n\n## 主題\n\n[Education 教育](../topics/education.md)\n",
+  "body": "## 意思\n\n**n.** 課程（整體規劃）：the subjects included in a course of study\n\n## 例句\n\n> Many people believe financial skills should be part of the school curriculum.\n\n## 不同用法\n\n### 1. 可數，複數 curricula 或 curriculums\n\n> Schools in different countries follow very different curricula.\n\n正式寫作常用 curricula。\n\n### 2. on the curriculum\n\n> Coding is now on the curriculum in many primary schools.\n\n「被列入課程」的固定說法。\n\n### 3. 形容詞 curricular / extracurricular\n\n> Students are encouraged to join extracurricular activities.\n\nextracurricular 是「課外的」。\n\n## 常見搭配\n\n- school curriculum\n- national curriculum\n\n見 [搭配詞](../concepts/collocation.md)。\n\n## 同義替換\n\n- syllabus\n- course of study\n\n見 [同義替換](../concepts/paraphrasing.md)。\n\n## 字族\n\n- curricular (adj.)\n\n見 [字族](../concepts/word-family.md)。\n\n## 相關單字\n\n- [compulsory](compulsory.md)（adj. 義務的、強制的）\n- [vocational](vocational.md)（adj. 職業的、技職的）\n\n## 主題\n\n[Education 教育](../topics/education.md)\n",
   "pos": "n.",
   "sources": [
-   "raw/vocab/2026-11-16-education.md"
+   "raw/vocab/2026-11-16-education.md",
+   "raw/vocab/2026-11-16-usage.md"
   ],
   "summary": "n. 課程（整體規劃）",
   "title": "curriculum",
@@ -188,10 +194,11 @@ window.WIKI = {
   "zh": "課程（整體規劃）"
  },
  "words/deteriorate": {
-  "body": "## 意思\n\n**v.** 惡化、變差：to become worse over time\n\n## 例句\n\n> Air quality in many cities has deteriorated over the past decade.\n\n## 常見搭配\n\n- deteriorate rapidly\n- deteriorating conditions\n\n見 [搭配詞](../concepts/collocation.md)。\n\n## 同義替換\n\n- worsen\n- decline\n\n見 [同義替換](../concepts/paraphrasing.md)。\n\n## 字族\n\n- deterioration (n.)\n\n見 [字族](../concepts/word-family.md)。\n\n## 相關單字\n\n- [mitigate](mitigate.md)（v. 減輕、緩和）\n- [emission](emission.md)（n. 排放、排放物）\n\n## 主題\n\n[Environment 環境](../topics/environment.md)\n",
+  "body": "## 意思\n\n**v.** 惡化、變差：to become worse over time\n\n## 例句\n\n> Air quality in many cities has deteriorated over the past decade.\n\n## 不同用法\n\n### 1. 不及物：主詞 + deteriorate\n\n> The patient's condition deteriorated overnight.\n\n不接受詞，主詞本身「變差」。\n\n### 2. deteriorate into + 名詞\n\n> The peaceful protest deteriorated into violence.\n\n惡化成某種更糟的狀態。\n\n### 3. 名詞 deterioration of + 名詞\n\n> The deterioration of public infrastructure worries many residents.\n\n寫作中常改用名詞讓句子更正式。\n\n## 常見搭配\n\n- deteriorate rapidly\n- deteriorating conditions\n\n見 [搭配詞](../concepts/collocation.md)。\n\n## 同義替換\n\n- worsen\n- decline\n\n見 [同義替換](../concepts/paraphrasing.md)。\n\n## 字族\n\n- deterioration (n.)\n\n見 [字族](../concepts/word-family.md)。\n\n## 相關單字\n\n- [mitigate](mitigate.md)（v. 減輕、緩和）\n- [emission](emission.md)（n. 排放、排放物）\n\n## 主題\n\n[Environment 環境](../topics/environment.md)\n",
   "pos": "v.",
   "sources": [
-   "raw/vocab/2026-11-16-environment.md"
+   "raw/vocab/2026-11-16-environment.md",
+   "raw/vocab/2026-11-16-usage.md"
   ],
   "summary": "v. 惡化、變差",
   "title": "deteriorate",
@@ -201,10 +208,11 @@ window.WIKI = {
   "zh": "惡化、變差"
  },
  "words/emission": {
-  "body": "## 意思\n\n**n.** 排放、排放物：gas or other substances released into the air\n\n## 例句\n\n> Reducing carbon emissions is essential to slowing climate change.\n\n## 常見搭配\n\n- carbon emissions\n- cut emissions\n\n見 [搭配詞](../concepts/collocation.md)。\n\n## 同義替換\n\n- discharge\n- release\n\n見 [同義替換](../concepts/paraphrasing.md)。\n\n## 字族\n\n- emit (v.)\n\n見 [字族](../concepts/word-family.md)。\n\n## 相關單字\n\n- [mitigate](mitigate.md)（v. 減輕、緩和）\n- [sustainable](sustainable.md)（adj. 可持續的、能永續的）\n\n## 主題\n\n[Environment 環境](../topics/environment.md)\n",
+  "body": "## 意思\n\n**n.** 排放、排放物：gas or other substances released into the air\n\n## 例句\n\n> Reducing carbon emissions is essential to slowing climate change.\n\n## 不同用法\n\n### 1. 可數，常用複數\n\n> Car emissions are a major source of urban pollution.\n\n指具體的排放物時多用 emissions。\n\n### 2. emission of + 物質\n\n> The emission of harmful gases must be strictly controlled.\n\n強調「排放」這個動作。\n\n### 3. 動詞 emit\n\n> Factories emit large amounts of carbon dioxide.\n\n改寫時可把名詞換成動詞。\n\n## 常見搭配\n\n- carbon emissions\n- cut emissions\n\n見 [搭配詞](../concepts/collocation.md)。\n\n## 同義替換\n\n- discharge\n- release\n\n見 [同義替換](../concepts/paraphrasing.md)。\n\n## 字族\n\n- emit (v.)\n\n見 [字族](../concepts/word-family.md)。\n\n## 相關單字\n\n- [mitigate](mitigate.md)（v. 減輕、緩和）\n- [sustainable](sustainable.md)（adj. 可持續的、能永續的）\n\n## 主題\n\n[Environment 環境](../topics/environment.md)\n",
   "pos": "n.",
   "sources": [
-   "raw/vocab/2026-11-16-environment.md"
+   "raw/vocab/2026-11-16-environment.md",
+   "raw/vocab/2026-11-16-usage.md"
   ],
   "summary": "n. 排放、排放物",
   "title": "emission",
@@ -214,10 +222,11 @@ window.WIKI = {
   "zh": "排放、排放物"
  },
  "words/innovation": {
-  "body": "## 意思\n\n**n.** 創新：a new idea, method or product\n\n## 例句\n\n> Technological innovation has transformed the way people work.\n\n## 常見搭配\n\n- technological innovation\n- drive innovation\n\n見 [搭配詞](../concepts/collocation.md)。\n\n## 同義替換\n\n- invention\n- breakthrough\n\n見 [同義替換](../concepts/paraphrasing.md)。\n\n## 字族\n\n- innovate (v.)\n- innovative (adj.)\n\n見 [字族](../concepts/word-family.md)。\n\n## 相關單字\n\n- [obsolete](obsolete.md)（adj. 過時的、淘汰的）\n- [automation](automation.md)（n. 自動化）\n\n## 主題\n\n[Technology 科技](../topics/technology.md)\n",
+  "body": "## 意思\n\n**n.** 創新：a new idea, method or product\n\n## 例句\n\n> Technological innovation has transformed the way people work.\n\n## 不同用法\n\n### 1. 不可數：創新這件事\n\n> Innovation is the key to long-term economic growth.\n\n抽象概念，不加 a。\n\n### 2. 可數：一項新發明\n\n> The smartphone was one of the greatest innovations of the century.\n\n指具體的新產品或方法。\n\n### 3. 形容詞 innovative\n\n> The company is known for its innovative designs.\n\n描述有創意的。\n\n## 常見搭配\n\n- technological innovation\n- drive innovation\n\n見 [搭配詞](../concepts/collocation.md)。\n\n## 同義替換\n\n- invention\n- breakthrough\n\n見 [同義替換](../concepts/paraphrasing.md)。\n\n## 字族\n\n- innovate (v.)\n- innovative (adj.)\n\n見 [字族](../concepts/word-family.md)。\n\n## 相關單字\n\n- [obsolete](obsolete.md)（adj. 過時的、淘汰的）\n- [automation](automation.md)（n. 自動化）\n\n## 主題\n\n[Technology 科技](../topics/technology.md)\n",
   "pos": "n.",
   "sources": [
-   "raw/vocab/2026-11-16-technology.md"
+   "raw/vocab/2026-11-16-technology.md",
+   "raw/vocab/2026-11-16-usage.md"
   ],
   "summary": "n. 創新",
   "title": "innovation",
@@ -227,10 +236,11 @@ window.WIKI = {
   "zh": "創新"
  },
  "words/literacy": {
-  "body": "## 意思\n\n**n.** 讀寫能力：the ability to read and write\n\n## 例句\n\n> Improving adult literacy can reduce unemployment.\n\n## 常見搭配\n\n- literacy rate\n- digital literacy\n\n見 [搭配詞](../concepts/collocation.md)。\n\n## 同義替換\n\n- reading and writing skills\n\n見 [同義替換](../concepts/paraphrasing.md)。\n\n## 字族\n\n- literate (adj.)\n- illiterate (adj.)\n\n見 [字族](../concepts/word-family.md)。\n\n## 相關單字\n\n- [cognitive](cognitive.md)（adj. 認知的）\n\n## 主題\n\n[Education 教育](../topics/education.md)\n",
+  "body": "## 意思\n\n**n.** 讀寫能力：the ability to read and write\n\n## 例句\n\n> Improving adult literacy can reduce unemployment.\n\n## 不同用法\n\n### 1. 讀寫能力\n\n> The government launched a campaign to raise literacy levels.\n\n基本意思。\n\n### 2. 某領域的能力：digital / financial literacy\n\n> Financial literacy should be taught at school.\n\n前面加領域，表示該方面的知識。\n\n### 3. 形容詞 literate / illiterate\n\n> Being computer literate is essential in most jobs today.\n\ncomputer literate 是「會用電腦的」。\n\n## 常見搭配\n\n- literacy rate\n- digital literacy\n\n見 [搭配詞](../concepts/collocation.md)。\n\n## 同義替換\n\n- reading and writing skills\n\n見 [同義替換](../concepts/paraphrasing.md)。\n\n## 字族\n\n- literate (adj.)\n- illiterate (adj.)\n\n見 [字族](../concepts/word-family.md)。\n\n## 相關單字\n\n- [cognitive](cognitive.md)（adj. 認知的）\n\n## 主題\n\n[Education 教育](../topics/education.md)\n",
   "pos": "n.",
   "sources": [
-   "raw/vocab/2026-11-16-education.md"
+   "raw/vocab/2026-11-16-education.md",
+   "raw/vocab/2026-11-16-usage.md"
   ],
   "summary": "n. 讀寫能力",
   "title": "literacy",
@@ -240,10 +250,11 @@ window.WIKI = {
   "zh": "讀寫能力"
  },
  "words/mitigate": {
-  "body": "## 意思\n\n**v.** 減輕、緩和：to make something harmful less severe\n\n## 例句\n\n> Planting trees can help mitigate the effects of urban heat.\n\n## 常見搭配\n\n- mitigate the impact\n- mitigate risks\n\n見 [搭配詞](../concepts/collocation.md)。\n\n## 同義替換\n\n- alleviate\n- reduce\n\n見 [同義替換](../concepts/paraphrasing.md)。\n\n## 字族\n\n- mitigation (n.)\n\n見 [字族](../concepts/word-family.md)。\n\n## 相關單字\n\n- [deteriorate](deteriorate.md)（v. 惡化、變差）\n- [emission](emission.md)（n. 排放、排放物）\n\n## 主題\n\n[Environment 環境](../topics/environment.md)\n",
+  "body": "## 意思\n\n**v.** 減輕、緩和：to make something harmful less severe\n\n## 例句\n\n> Planting trees can help mitigate the effects of urban heat.\n\n## 不同用法\n\n### 1. 及物：mitigate + 負面名詞\n\n> Early warning systems can mitigate the damage caused by floods.\n\n受詞通常是傷害、風險、影響。\n\n### 2. 被動語態\n\n> The risks can be mitigated through careful planning.\n\n寫作中常用被動，語氣較客觀。\n\n### 3. 名詞 mitigation\n\n> Climate change mitigation requires international cooperation.\n\n常見片語 climate change mitigation。\n\n## 常見搭配\n\n- mitigate the impact\n- mitigate risks\n\n見 [搭配詞](../concepts/collocation.md)。\n\n## 同義替換\n\n- alleviate\n- reduce\n\n見 [同義替換](../concepts/paraphrasing.md)。\n\n## 字族\n\n- mitigation (n.)\n\n見 [字族](../concepts/word-family.md)。\n\n## 相關單字\n\n- [deteriorate](deteriorate.md)（v. 惡化、變差）\n- [emission](emission.md)（n. 排放、排放物）\n\n## 主題\n\n[Environment 環境](../topics/environment.md)\n",
   "pos": "v.",
   "sources": [
-   "raw/vocab/2026-11-16-environment.md"
+   "raw/vocab/2026-11-16-environment.md",
+   "raw/vocab/2026-11-16-usage.md"
   ],
   "summary": "v. 減輕、緩和",
   "title": "mitigate",
@@ -253,10 +264,11 @@ window.WIKI = {
   "zh": "減輕、緩和"
  },
  "words/obsolete": {
-  "body": "## 意思\n\n**adj.** 過時的、淘汰的：no longer used because something newer exists\n\n## 例句\n\n> Many traditional jobs may become obsolete because of automation.\n\n## 常見搭配\n\n- become obsolete\n- obsolete technology\n\n見 [搭配詞](../concepts/collocation.md)。\n\n## 同義替換\n\n- outdated\n- out of date\n\n見 [同義替換](../concepts/paraphrasing.md)。\n\n## 字族\n\n- obsolescence (n.)\n\n見 [字族](../concepts/word-family.md)。\n\n## 相關單字\n\n- [innovation](innovation.md)（n. 創新）\n- [automation](automation.md)（n. 自動化）\n\n## 主題\n\n[Technology 科技](../topics/technology.md)\n",
+  "body": "## 意思\n\n**adj.** 過時的、淘汰的：no longer used because something newer exists\n\n## 例句\n\n> Many traditional jobs may become obsolete because of automation.\n\n## 不同用法\n\n### 1. become / render something obsolete\n\n> Digital cameras rendered film cameras almost obsolete.\n\nrender ... obsolete 是正式寫法。\n\n### 2. 放在名詞前\n\n> Many offices still rely on obsolete software.\n\n修飾設備、技術、技能。\n\n### 3. 名詞 obsolescence\n\n> Planned obsolescence encourages people to buy new products.\n\nplanned obsolescence 是「計畫性淘汰」。\n\n## 常見搭配\n\n- become obsolete\n- obsolete technology\n\n見 [搭配詞](../concepts/collocation.md)。\n\n## 同義替換\n\n- outdated\n- out of date\n\n見 [同義替換](../concepts/paraphrasing.md)。\n\n## 字族\n\n- obsolescence (n.)\n\n見 [字族](../concepts/word-family.md)。\n\n## 相關單字\n\n- [innovation](innovation.md)（n. 創新）\n- [automation](automation.md)（n. 自動化）\n\n## 主題\n\n[Technology 科技](../topics/technology.md)\n",
   "pos": "adj.",
   "sources": [
-   "raw/vocab/2026-11-16-technology.md"
+   "raw/vocab/2026-11-16-technology.md",
+   "raw/vocab/2026-11-16-usage.md"
   ],
   "summary": "adj. 過時的、淘汰的",
   "title": "obsolete",
@@ -266,10 +278,11 @@ window.WIKI = {
   "zh": "過時的、淘汰的"
  },
  "words/privacy": {
-  "body": "## 意思\n\n**n.** 隱私：the state of being free from public attention\n\n## 例句\n\n> Social media users often underestimate the risks to their privacy.\n\n## 常見搭配\n\n- invasion of privacy\n- data privacy\n\n見 [搭配詞](../concepts/collocation.md)。\n\n## 同義替換\n\n- confidentiality\n\n見 [同義替換](../concepts/paraphrasing.md)。\n\n## 字族\n\n- private (adj.)\n\n見 [字族](../concepts/word-family.md)。\n\n## 相關單字\n\n- [surveillance](surveillance.md)（n. 監控、監視）\n\n## 主題\n\n[Technology 科技](../topics/technology.md)\n",
+  "body": "## 意思\n\n**n.** 隱私：the state of being free from public attention\n\n## 例句\n\n> Social media users often underestimate the risks to their privacy.\n\n## 不同用法\n\n### 1. 不可數名詞\n\n> Everyone has the right to privacy.\n\nthe right to privacy 是固定說法。\n\n### 2. invade / protect someone's privacy\n\n> Reporters should not invade the privacy of ordinary people.\n\n常搭配 invade、protect、respect。\n\n### 3. 放在名詞前當修飾語\n\n> Users should check the privacy settings on their accounts.\n\nprivacy settings／policy／concerns。\n\n## 常見搭配\n\n- invasion of privacy\n- data privacy\n\n見 [搭配詞](../concepts/collocation.md)。\n\n## 同義替換\n\n- confidentiality\n\n見 [同義替換](../concepts/paraphrasing.md)。\n\n## 字族\n\n- private (adj.)\n\n見 [字族](../concepts/word-family.md)。\n\n## 相關單字\n\n- [surveillance](surveillance.md)（n. 監控、監視）\n\n## 主題\n\n[Technology 科技](../topics/technology.md)\n",
   "pos": "n.",
   "sources": [
-   "raw/vocab/2026-11-16-technology.md"
+   "raw/vocab/2026-11-16-technology.md",
+   "raw/vocab/2026-11-16-usage.md"
   ],
   "summary": "n. 隱私",
   "title": "privacy",
@@ -279,10 +292,11 @@ window.WIKI = {
   "zh": "隱私"
  },
  "words/surveillance": {
-  "body": "## 意思\n\n**n.** 監控、監視：careful watching of people, often by the authorities\n\n## 例句\n\n> The spread of surveillance cameras raises concerns about privacy.\n\n## 常見搭配\n\n- surveillance cameras\n- mass surveillance\n\n見 [搭配詞](../concepts/collocation.md)。\n\n## 同義替換\n\n- monitoring\n\n見 [同義替換](../concepts/paraphrasing.md)。\n\n## 字族\n\n- （筆記中未列出）\n\n見 [字族](../concepts/word-family.md)。\n\n## 相關單字\n\n- [privacy](privacy.md)（n. 隱私）\n- [ubiquitous](ubiquitous.md)（adj. 無所不在的）\n\n## 主題\n\n[Technology 科技](../topics/technology.md)\n",
+  "body": "## 意思\n\n**n.** 監控、監視：careful watching of people, often by the authorities\n\n## 例句\n\n> The spread of surveillance cameras raises concerns about privacy.\n\n## 不同用法\n\n### 1. 不可數名詞\n\n> The city has increased surveillance in public spaces.\n\n不加 a、不用複數。\n\n### 2. under surveillance\n\n> The suspect was kept under surveillance for weeks.\n\n「被監視中」的固定片語。\n\n### 3. 放在名詞前當修飾語\n\n> Surveillance technology is developing rapidly.\n\nsurveillance camera／system／technology。\n\n## 常見搭配\n\n- surveillance cameras\n- mass surveillance\n\n見 [搭配詞](../concepts/collocation.md)。\n\n## 同義替換\n\n- monitoring\n\n見 [同義替換](../concepts/paraphrasing.md)。\n\n## 字族\n\n- （筆記中未列出）\n\n見 [字族](../concepts/word-family.md)。\n\n## 相關單字\n\n- [privacy](privacy.md)（n. 隱私）\n- [ubiquitous](ubiquitous.md)（adj. 無所不在的）\n\n## 主題\n\n[Technology 科技](../topics/technology.md)\n",
   "pos": "n.",
   "sources": [
-   "raw/vocab/2026-11-16-technology.md"
+   "raw/vocab/2026-11-16-technology.md",
+   "raw/vocab/2026-11-16-usage.md"
   ],
   "summary": "n. 監控、監視",
   "title": "surveillance",
@@ -292,10 +306,11 @@ window.WIKI = {
   "zh": "監控、監視"
  },
  "words/sustainable": {
-  "body": "## 意思\n\n**adj.** 可持續的、能永續的：able to continue without damaging the environment\n\n## 例句\n\n> Governments should invest in sustainable forms of transport.\n\n## 常見搭配\n\n- sustainable development\n- sustainable energy\n\n見 [搭配詞](../concepts/collocation.md)。\n\n## 同義替換\n\n- eco-friendly\n- renewable\n\n見 [同義替換](../concepts/paraphrasing.md)。\n\n## 字族\n\n- sustainability (n.)\n- sustain (v.)\n\n見 [字族](../concepts/word-family.md)。\n\n## 相關單字\n\n- [conservation](conservation.md)（n. 保育、保護）\n- [emission](emission.md)（n. 排放、排放物）\n\n## 主題\n\n[Environment 環境](../topics/environment.md)\n",
+  "body": "## 意思\n\n**adj.** 可持續的、能永續的：able to continue without damaging the environment\n\n## 例句\n\n> Governments should invest in sustainable forms of transport.\n\n## 不同用法\n\n### 1. 形容詞修飾名詞\n\n> Many companies now focus on sustainable packaging.\n\n放在名詞前，表示對環境友善。\n\n### 2. 表示「能長期維持的」（非環境）\n\n> Working twelve hours a day is not sustainable.\n\n也可指生活方式、經濟成長能否持續。\n\n### 3. 名詞 sustainability\n\n> Sustainability has become a key goal for many cities.\n\n抽象名詞，常當主詞。\n\n## 常見搭配\n\n- sustainable development\n- sustainable energy\n\n見 [搭配詞](../concepts/collocation.md)。\n\n## 同義替換\n\n- eco-friendly\n- renewable\n\n見 [同義替換](../concepts/paraphrasing.md)。\n\n## 字族\n\n- sustainability (n.)\n- sustain (v.)\n\n見 [字族](../concepts/word-family.md)。\n\n## 相關單字\n\n- [conservation](conservation.md)（n. 保育、保護）\n- [emission](emission.md)（n. 排放、排放物）\n\n## 主題\n\n[Environment 環境](../topics/environment.md)\n",
   "pos": "adj.",
   "sources": [
-   "raw/vocab/2026-11-16-environment.md"
+   "raw/vocab/2026-11-16-environment.md",
+   "raw/vocab/2026-11-16-usage.md"
   ],
   "summary": "adj. 可持續的、能永續的",
   "title": "sustainable",
@@ -305,10 +320,11 @@ window.WIKI = {
   "zh": "可持續的、能永續的"
  },
  "words/tuition": {
-  "body": "## 意思\n\n**n.** 學費；教學：money paid for teaching, or the teaching itself\n\n## 例句\n\n> Rising tuition fees prevent some students from going to university.\n\n## 常見搭配\n\n- tuition fees\n- private tuition\n\n見 [搭配詞](../concepts/collocation.md)。\n\n## 同義替換\n\n- fees\n- instruction\n\n見 [同義替換](../concepts/paraphrasing.md)。\n\n## 字族\n\n- （筆記中未列出）\n\n見 [字族](../concepts/word-family.md)。\n\n## 相關單字\n\n- [vocational](vocational.md)（adj. 職業的、技職的）\n\n## 主題\n\n[Education 教育](../topics/education.md)\n",
+  "body": "## 意思\n\n**n.** 學費；教學：money paid for teaching, or the teaching itself\n\n## 例句\n\n> Rising tuition fees prevent some students from going to university.\n\n## 不同用法\n\n### 1. 學費：tuition fees\n\n> Many students take part-time jobs to pay their tuition fees.\n\n英式寫法常用 tuition fees。\n\n### 2. 教學、家教：private tuition\n\n> Some parents spend a lot on private tuition for their children.\n\n不可數，指授課本身。\n\n### 3. free tuition\n\n> Several countries offer free tuition at public universities.\n\n討論教育政策時常見。\n\n## 常見搭配\n\n- tuition fees\n- private tuition\n\n見 [搭配詞](../concepts/collocation.md)。\n\n## 同義替換\n\n- fees\n- instruction\n\n見 [同義替換](../concepts/paraphrasing.md)。\n\n## 字族\n\n- （筆記中未列出）\n\n見 [字族](../concepts/word-family.md)。\n\n## 相關單字\n\n- [vocational](vocational.md)（adj. 職業的、技職的）\n\n## 主題\n\n[Education 教育](../topics/education.md)\n",
   "pos": "n.",
   "sources": [
-   "raw/vocab/2026-11-16-education.md"
+   "raw/vocab/2026-11-16-education.md",
+   "raw/vocab/2026-11-16-usage.md"
   ],
   "summary": "n. 學費；教學",
   "title": "tuition",
@@ -318,10 +334,11 @@ window.WIKI = {
   "zh": "學費；教學"
  },
  "words/ubiquitous": {
-  "body": "## 意思\n\n**adj.** 無所不在的：seeming to be everywhere\n\n## 例句\n\n> Smartphones have become ubiquitous in modern society.\n\n## 常見搭配\n\n- ubiquitous technology\n- become ubiquitous\n\n見 [搭配詞](../concepts/collocation.md)。\n\n## 同義替換\n\n- widespread\n- omnipresent\n\n見 [同義替換](../concepts/paraphrasing.md)。\n\n## 字族\n\n- ubiquity (n.)\n\n見 [字族](../concepts/word-family.md)。\n\n## 相關單字\n\n- [surveillance](surveillance.md)（n. 監控、監視）\n\n## 主題\n\n[Technology 科技](../topics/technology.md)\n",
+  "body": "## 意思\n\n**adj.** 無所不在的：seeming to be everywhere\n\n## 例句\n\n> Smartphones have become ubiquitous in modern society.\n\n## 不同用法\n\n### 1. be ubiquitous in + 地方\n\n> Coffee shops are ubiquitous in big cities.\n\n描述某東西到處都是。\n\n### 2. 放在名詞前\n\n> The ubiquitous use of social media affects teenagers' sleep.\n\n正式寫作常用來取代 very common。\n\n### 3. 名詞 ubiquity\n\n> The ubiquity of mobile phones has changed how we communicate.\n\n抽象名詞，適合當主詞。\n\n## 常見搭配\n\n- ubiquitous technology\n- become ubiquitous\n\n見 [搭配詞](../concepts/collocation.md)。\n\n## 同義替換\n\n- widespread\n- omnipresent\n\n見 [同義替換](../concepts/paraphrasing.md)。\n\n## 字族\n\n- ubiquity (n.)\n\n見 [字族](../concepts/word-family.md)。\n\n## 相關單字\n\n- [surveillance](surveillance.md)（n. 監控、監視）\n\n## 主題\n\n[Technology 科技](../topics/technology.md)\n",
   "pos": "adj.",
   "sources": [
-   "raw/vocab/2026-11-16-technology.md"
+   "raw/vocab/2026-11-16-technology.md",
+   "raw/vocab/2026-11-16-usage.md"
   ],
   "summary": "adj. 無所不在的",
   "title": "ubiquitous",
@@ -331,10 +348,11 @@ window.WIKI = {
   "zh": "無所不在的"
  },
  "words/vocational": {
-  "body": "## 意思\n\n**adj.** 職業的、技職的：relating to the skills needed for a particular job\n\n## 例句\n\n> Vocational training gives young people practical skills for the job market.\n\n## 常見搭配\n\n- vocational training\n- vocational school\n\n見 [搭配詞](../concepts/collocation.md)。\n\n## 同義替換\n\n- practical\n- job-related\n\n見 [同義替換](../concepts/paraphrasing.md)。\n\n## 字族\n\n- vocation (n.)\n\n見 [字族](../concepts/word-family.md)。\n\n## 相關單字\n\n- [curriculum](curriculum.md)（n. 課程（整體規劃））\n- [automation](automation.md)（n. 自動化）\n\n## 主題\n\n[Education 教育](../topics/education.md)\n",
+  "body": "## 意思\n\n**adj.** 職業的、技職的：relating to the skills needed for a particular job\n\n## 例句\n\n> Vocational training gives young people practical skills for the job market.\n\n## 不同用法\n\n### 1. 放在名詞前\n\n> She enrolled in a vocational course in nursing.\n\n修飾課程、學校、技能。\n\n### 2. 與學術教育對比\n\n> Vocational education is as valuable as academic study.\n\n議論文常與 academic 對照。\n\n### 3. 名詞 vocation\n\n> He found his true vocation in teaching.\n\nvocation 有「天職、使命感」的意思。\n\n## 常見搭配\n\n- vocational training\n- vocational school\n\n見 [搭配詞](../concepts/collocation.md)。\n\n## 同義替換\n\n- practical\n- job-related\n\n見 [同義替換](../concepts/paraphrasing.md)。\n\n## 字族\n\n- vocation (n.)\n\n見 [字族](../concepts/word-family.md)。\n\n## 相關單字\n\n- [curriculum](curriculum.md)（n. 課程（整體規劃））\n- [automation](automation.md)（n. 自動化）\n\n## 主題\n\n[Education 教育](../topics/education.md)\n",
   "pos": "adj.",
   "sources": [
-   "raw/vocab/2026-11-16-education.md"
+   "raw/vocab/2026-11-16-education.md",
+   "raw/vocab/2026-11-16-usage.md"
   ],
   "summary": "adj. 職業的、技職的",
   "title": "vocational",

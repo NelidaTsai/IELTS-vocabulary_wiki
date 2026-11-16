@@ -5,7 +5,7 @@ summary: n. 排放、排放物
 pos: n.
 zh: 排放、排放物
 topic: environment
-sources: raw/vocab/2026-11-16-environment.md
+sources: raw/vocab/2026-11-16-environment.md, raw/vocab/2026-11-16-usage.md
 updated: 2026-11-16
 ---
 
@@ -16,6 +16,26 @@ updated: 2026-11-16
 ## 例句
 
 > Reducing carbon emissions is essential to slowing climate change.
+
+## 不同用法
+
+### 1. 可數，常用複數
+
+> Car emissions are a major source of urban pollution.
+
+指具體的排放物時多用 emissions。
+
+### 2. emission of + 物質
+
+> The emission of harmful gases must be strictly controlled.
+
+強調「排放」這個動作。
+
+### 3. 動詞 emit
+
+> Factories emit large amounts of carbon dioxide.
+
+改寫時可把名詞換成動詞。
 
 ## 常見搭配
 
