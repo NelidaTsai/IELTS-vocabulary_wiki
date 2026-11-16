@@ -2,8 +2,8 @@
 
 我準備雅思用的單字知識庫。參考 Andrej Karpathy 的 [LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)：我只負責把單字筆記放進 `raw/vocab/`，AI 依照 [`CLAUDE.md`](CLAUDE.md) 的規則把它整理成一字一頁、互相連結的知識庫，再呈現成網站。
 
-- 網站：https://nelidatsai.github.io/ielts-vocab-wiki/
-- 知識庫頁：https://nelidatsai.github.io/ielts-vocab-wiki/wiki.html
+- 網站：https://nelidatsai.github.io/IELTS-vocabulary_wiki/
+- 知識庫頁：https://nelidatsai.github.io/IELTS-vocabulary_wiki/wiki.html
 - 規則：[`CLAUDE.md`](CLAUDE.md)（其他 AI 工具看 [`AGENTS.md`](AGENTS.md)）
 
 ## 架構
