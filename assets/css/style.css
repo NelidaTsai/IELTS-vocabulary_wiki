@@ -1,0 +1,501 @@
+/* ==========================================================================
+   IELTS 單字知識庫 — 全站唯一樣式檔
+   規則見 CLAUDE.md 第 10 節：顏色只能使用下方 :root 變數
+   區段：1 變數 / 2 基礎 / 3 版頭版尾 / 4 首頁 / 5 卡片與列表 / 6 知識庫頁 / 7 工具類 / 8 RWD
+   ========================================================================== */
+
+/* ---------- 1. 變數 ---------- */
+:root {
+  --paper: #f6f2ea;
+  --paper-2: #fffdf8;
+  --ink: #1f1d1a;
+  --ink-2: #6b655c;
+  --line: #e2dbcd;
+  --accent: #3b4cca;
+  --accent-soft: #e4e7fb;
+  --warn: #9a5b00;
+  --warn-soft: #fbefd9;
+
+  --font-serif: "Noto Serif TC", "Songti TC", serif;
+  --font-sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+
+  --max: 1080px;
+  --measure: 68ch;
+  --radius: 14px;
+  --shadow: 0 1px 2px rgb(31 29 26 / 0.04), 0 8px 24px rgb(31 29 26 / 0.06);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #17161a;
+    --paper-2: #201f24;
+    --ink: #ece8e1;
+    --ink-2: #a39d93;
+    --line: #34323a;
+    --accent: #8f9bff;
+    --accent-soft: #2a2d4a;
+    --warn: #f0b75e;
+    --warn-soft: #3a2f1c;
+    --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 8px 24px rgb(0 0 0 / 0.25);
+  }
+}
+
+/* ---------- 2. 基礎 ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: var(--accent); text-underline-offset: 3px; }
+
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+}
+
+.container {
+  width: min(100% - 48px, var(--max));
+  margin-inline: auto;
+}
+
+/* ---------- 3. 版頭版尾 ---------- */
+.site-header {
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 18px;
+}
+
+.brand {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.brand span { color: var(--accent); }
+
+.site-nav { display: flex; gap: 22px; }
+
+.site-nav a {
+  color: var(--ink-2);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.site-nav a:hover { color: var(--ink); }
+
+.site-footer {
+  margin-top: 96px;
+  border-top: 1px solid var(--line);
+  color: var(--ink-2);
+  font-size: 0.85rem;
+}
+
+.site-footer .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-block: 28px;
+}
+
+/* ---------- 4. 首頁 ---------- */
+.hero {
+  padding-block: 80px 56px;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 16px;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  margin: 0 0 20px;
+  max-width: 24ch;
+}
+
+.hero p.lead {
+  font-size: 1.1rem;
+  color: var(--ink-2);
+  max-width: 46ch;
+  margin: 0;
+}
+
+.section-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  border-top: 1px solid var(--ink);
+  padding-top: 18px;
+  margin-bottom: 28px;
+}
+
+.section-head h2 { margin: 0; font-size: 1.5rem; }
+
+.filters { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.filter-btn {
+  font: inherit;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink-2);
+  cursor: pointer;
+}
+
+.filter-btn:hover { border-color: var(--ink-2); color: var(--ink); }
+
+.filter-btn[aria-pressed="true"] {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 32px;
+  margin-top: 96px;
+  border-top: 1px solid var(--ink);
+  padding-top: 18px;
+}
+
+.about h2 { margin: 0; font-size: 1.5rem; }
+.about p { margin: 0 0 1em; color: var(--ink-2); }
+
+/* ---------- 5. 卡片與列表 ---------- */
+.block { margin-top: 72px; }
+
+.section-note { margin: 0; font-size: 0.85rem; color: var(--ink-2); }
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 40px;
+  margin: 36px 0 0;
+}
+
+.stats dt {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: var(--ink-2);
+}
+
+.stats dd {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.topic-card, .word-card {
+  display: block;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.topic-card:hover, .word-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+  border-color: var(--ink-2);
+}
+
+.topic-card { padding: 22px 24px 24px; border-top: 4px solid var(--accent); }
+
+.topic-card h3 { margin: 0 0 8px; font-size: 1.25rem; }
+
+.topic-card p.summary { margin: 0; color: var(--ink-2); font-size: 0.92rem; line-height: 1.7; }
+
+.card-meta, .word-card-meta {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--ink-2);
+  letter-spacing: 0.05em;
+  margin: 0 0 6px;
+}
+
+.word-search { max-width: 420px; }
+
+.word-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 14px;
+}
+
+.word-card { padding: 16px 18px 18px; }
+
+.word-card h3 {
+  margin: 0 0 4px;
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  color: var(--accent);
+}
+
+.word-zh { margin: 0; font-size: 0.92rem; color: var(--ink); }
+
+.query-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+
+.query-list a {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 16px 20px;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: inherit;
+  text-decoration: none;
+}
+
+.query-list a:hover { border-color: var(--ink-2); }
+
+.q-mark {
+  flex: none;
+  width: 30px; height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--paper-2);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.q-text strong { display: block; font-weight: 500; }
+.q-text small { color: var(--ink-2); font-size: 0.85rem; }
+
+.flow { padding-left: 1.3em; margin: 0 0 1em; color: var(--ink-2); }
+.flow li { margin-bottom: 0.6em; }
+.flow li::marker { color: var(--accent); }
+.flow strong { color: var(--ink); }
+
+.about code, .flow code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background: var(--accent-soft);
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+.empty-note { color: var(--ink-2); padding: 32px 0; grid-column: 1 / -1; }
+
+.todo {
+  background: var(--warn-soft);
+  color: var(--warn);
+  border-left: 3px solid var(--warn);
+  padding: 10px 14px;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.92rem;
+}
+
+/* ---------- 6. 知識庫頁（wiki.html） ---------- */
+.site-nav a[aria-current="page"] { color: var(--ink); }
+
+.wiki-layout {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 56px;
+  align-items: start;
+  padding-top: 40px;
+}
+
+.wiki-side { position: sticky; top: 24px; }
+
+.wiki-search {
+  width: 100%;
+  font: inherit;
+  font-size: 0.9rem;
+  padding: 8px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper-2);
+  color: var(--ink);
+  margin-bottom: 20px;
+}
+
+.wiki-search:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.wiki-nav ul { list-style: none; margin: 0 0 18px; padding: 0; }
+
+.wiki-nav-group {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: var(--ink-2);
+  margin: 0 0 4px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--line);
+}
+
+.wiki-nav-group span { color: var(--accent); }
+
+.wiki-nav a {
+  display: block;
+  padding: 4px 10px;
+  margin-left: -10px;
+  border-radius: 8px;
+  color: var(--ink-2);
+  text-decoration: none;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.wiki-nav a:hover { color: var(--ink); background: var(--paper-2); }
+
+.wiki-nav a[aria-current="page"] { color: var(--accent); background: var(--accent-soft); font-weight: 500; }
+
+.wiki-side-note { font-size: 0.8rem; color: var(--ink-2); line-height: 1.6; }
+
+.wiki-article { max-width: 76ch; min-height: 60vh; }
+
+.wiki-article h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); margin: 0 0 8px; }
+
+.wiki-summary { font-size: 1.05rem; color: var(--ink-2); margin: 0 0 12px; }
+
+.wiki-meta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-2);
+  padding-bottom: 20px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.wiki-body h2 { font-size: 1.3rem; margin: 40px 0 12px; }
+.wiki-body h3, .wiki-body h4 { font-size: 1.05rem; margin: 28px 0 8px; }
+.wiki-body p { margin: 0 0 1em; }
+.wiki-body ul, .wiki-body ol { padding-left: 1.3em; margin: 0 0 1em; }
+.wiki-body li { margin-bottom: 0.4em; }
+.wiki-body li::marker { color: var(--accent); }
+
+.wiki-body code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background: var(--accent-soft);
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+.wiki-body pre {
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px 18px;
+  overflow-x: auto;
+}
+
+.wiki-body pre code { background: none; padding: 0; }
+
+.wiki-body blockquote {
+  margin: 0 0 1.4em;
+  padding: 10px 16px;
+  border-left: 3px solid var(--accent);
+  background: var(--paper-2);
+  border-radius: 0 8px 8px 0;
+  color: var(--ink-2);
+}
+
+.wiki-body blockquote p { margin: 0; }
+
+.table-wrap { overflow-x: auto; margin: 0 0 1.4em; }
+
+.wiki-body table { border-collapse: collapse; width: 100%; font-size: 0.92rem; }
+
+.wiki-body th, .wiki-body td {
+  text-align: left;
+  vertical-align: top;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.wiki-body th {
+  font-weight: 500;
+  color: var(--ink-2);
+  border-bottom: 1px solid var(--ink-2);
+  white-space: nowrap;
+}
+
+.wiki-body hr { border: 0; border-top: 1px solid var(--line); margin: 32px 0; }
+
+.wiki-backlinks {
+  margin-top: 48px;
+  padding: 18px 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper-2);
+}
+
+.wiki-backlinks h2 { font-size: 1rem; margin: 0 0 8px; }
+.wiki-backlinks ul { margin: 0; padding-left: 1.2em; }
+.wiki-backlinks span { font-family: var(--font-mono); font-size: 0.72rem; color: var(--ink-2); }
+
+/* ---------- 7. 工具類 ---------- */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ---------- 8. RWD ---------- */
+@media (max-width: 720px) {
+  body { font-size: 16px; }
+  .hero { padding-block: 48px 36px; }
+  .topic-grid { grid-template-columns: 1fr; gap: 14px; }
+  .word-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .about { grid-template-columns: 1fr; gap: 12px; }
+  .site-nav { gap: 14px; }
+  .wiki-layout { grid-template-columns: 1fr; gap: 24px; padding-top: 24px; }
+  .wiki-side { position: static; }
+  .wiki-nav ul { display: flex; flex-wrap: wrap; gap: 4px 6px; margin-bottom: 14px; }
+  .wiki-nav a { margin-left: 0; padding: 3px 10px; border: 1px solid var(--line); border-radius: 999px; font-size: 0.85rem; }
+}

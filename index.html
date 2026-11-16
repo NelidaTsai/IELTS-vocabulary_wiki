@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IELTS 單字知識庫｜Nelida</title>
+  <meta name="description" content="依 Karpathy LLM Wiki 模式整理的 IELTS 單字知識庫：單字、主題、學習方法與只根據知識庫回答的問答紀錄。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="home">
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">IELTS<span>.</span>wiki</a>
+      <nav class="site-nav" aria-label="主選單">
+        <a href="#words">單字</a>
+        <a href="#queries">問答</a>
+        <a href="wiki.html">知識庫</a>
+        <a href="#how">運作方式</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">LLM Wiki · IELTS Vocabulary</p>
+      <h1>一個字一頁，越背越連成一張網。</h1>
+      <p class="lead">我的雅思單字筆記，交給 AI 整理成互相連結的知識庫：每個字有意思、例句、搭配、同義替換與字族，再依主題與學習方法串起來。</p>
+      <dl class="stats" data-stats></dl>
+    </section>
+
+    <section id="topics" aria-labelledby="topics-title">
+      <div class="section-head"><h2 id="topics-title">主題</h2></div>
+      <div class="topic-grid" data-topics></div>
+    </section>
+
+    <section id="words" class="block" aria-labelledby="words-title">
+      <div class="section-head">
+        <h2 id="words-title">單字</h2>
+        <div class="filters" data-filters role="group" aria-label="依主題篩選"></div>
+      </div>
+      <label class="visually-hidden" for="word-search">搜尋單字</label>
+      <input class="wiki-search word-search" id="word-search" type="search" placeholder="搜尋英文或中文，例如 mitigate、隱私…" data-word-search>
+      <div class="word-grid" data-words></div>
+      <noscript><p class="todo">單字列表需要啟用 JavaScript 才能顯示。</p></noscript>
+    </section>
+
+    <section id="queries" class="block" aria-labelledby="queries-title">
+      <div class="section-head"><h2 id="queries-title">問答紀錄</h2><p class="section-note">只根據知識庫回答，並標出引用頁面</p></div>
+      <ul class="query-list" data-queries></ul>
+    </section>
+
+    <section id="how" class="about" aria-labelledby="how-title">
+      <h2 id="how-title">運作方式</h2>
+      <div>
+        <ol class="flow">
+          <li><strong>raw/ 原始資料</strong>：我把單字筆記放進 <code>raw/vocab/</code>，AI 只讀不改。</li>
+          <li><strong>wiki/ 知識庫</strong>：AI 執行 ingest，把筆記整理成單字頁、主題頁、學習方法頁，更新目錄與操作紀錄。</li>
+          <li><strong>query 問答</strong>：問 AI 問題時，它只能根據知識庫回答並附上引用；知識庫沒有的，就說沒有。</li>
+          <li><strong>lint 檢查</strong>：腳本檢查斷掉的連結、漏掉的單字、缺來源的頁面。</li>
+        </ol>
+        <p>完整規則寫在 <a href="https://github.com/NelidaTsai/ielts-vocab-wiki/blob/main/CLAUDE.md" target="_blank" rel="noopener">CLAUDE.md</a>，所有頁面也都可以在 <a href="wiki.html">知識庫</a> 瀏覽。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>© <span data-year>2026</span> Nelida Tsai</span>
+      <span>純 HTML／CSS／JS · 部署於 GitHub Pages</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/wiki-data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
